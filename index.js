@@ -10,9 +10,7 @@ class Usuario {
   }
   
   class Propriedade {
-    constructor(id, nome, endereco, capacidadeHospedes, numeroQuartos, precoPorNoite, disponibilidade) {
-      this.id = id;
-      this.nome = nome;
+    constructor( endereco, capacidadeHospedes, numeroQuartos, precoPorNoite, disponibilidade) {
       this.endereco = endereco;
       this.capacidadeHospedes = capacidadeHospedes;
       this.numeroQuartos = numeroQuartos;
@@ -22,8 +20,7 @@ class Usuario {
   }
   
   class Reserva {
-    constructor(id, idPropriedade, idUsuario, checkIn, checkOut, valorTotal, statusPagamento) {
-      this.id = id;
+    constructor(idPropriedade, idUsuario, checkIn, checkOut, valorTotal, statusPagamento) {
       this.idPropriedade = idPropriedade;
       this.idUsuario = idUsuario;
       this.checkIn = checkIn;
@@ -34,10 +31,8 @@ class Usuario {
   }
   
   class Anuncio {
-    constructor(id, idProprietario, idPropriedade, titulo, descricao, status) {
-      this.id = id;
+    constructor(idProprietario, titulo, descricao, status) {
       this.idProprietario = idProprietario;
-      this.idPropriedade = idPropriedade;
       this.titulo = titulo;
       this.descricao = descricao;
       this.status = status || 'ativo';
@@ -72,10 +67,10 @@ class Usuario {
   const sistema = new Sistema();
   
   // Criação de usuários, propriedades, etc.
-  const usuario1 = new Usuario(1, 'João', 'Rua A, 123');
+  const usuario1 = new Usuario(1, 'Rafael El Shafie', 'Rua A, 123');
   const propriedade1 = new Propriedade(1, 'Pousada A', 'Rua B, 456', 10, 5, 100, true);
   const reserva1 = new Reserva(1, 1, 1, '2024-01-15', '2024-01-20', 500, 'pendente');
-  const anuncio1 = new Anuncio(1, 1, 1, 'Oferta Especial', 'Descrição da oferta', 'ativo');
+  const anuncio1 = new Anuncio(1, 1, 1, 'Oferta Especial', 'Descricao da oferta', 'ativo');
   
   // Adicionar ao sistema
   sistema.usuarios.push(usuario1);
@@ -84,12 +79,7 @@ class Usuario {
   sistema.anuncios.push(anuncio1);
   
   // Exemplo de login
-  sistema.fazerLogin('João');
+  sistema.fazerLogin('Rafael El Shafie');
   
-  // Realizar operações conforme as necessidades do sistema
-  // sistema.verMeusDados();
-  // sistema.reservarPropriedade();
-  // ...
-  
-  // Lembrando que a implementação completa e detalhada dependerá do contexto e das necessidades específicas do sistema.
+ 
   
