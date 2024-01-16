@@ -101,7 +101,7 @@
   }
 
   verListaDePropriedades() {
-    console.log('Lista de Propriedades (Ordem Alfabética):');
+    console.log('Lista de Propriedades (Ordem Alfabetica):');
     // Implementar lógica para exibir propriedades em ordem alfabética
     this.propriedades.sort((a, b) => a.nome.localeCompare(b.nome));
     this.propriedades.forEach(propriedade => {
@@ -132,7 +132,7 @@
       const propriedadeID = prompt('Digite o ID da propriedade que deseja reservar: ');
       // Implementar lógica para reservar propriedade
     } else {
-      console.log('Nenhum usuário logado.');
+      console.log("Nenhum usuário logado.");
     }
   }
 
